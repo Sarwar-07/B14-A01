@@ -1,0 +1,3 @@
+1. Prompt one: Here is a screenshot of a webpage. I want to create a FAQ section here now write me a prompt so I can copy and paste to a AI code generator 
+
+2. generated prompt: Act as an expert frontend developer. Generate a clean, responsive FAQ section for a tech conference named DevConf 2026 using pure HTML5 and CSS3. The design should match a modern developer portfolio style, using a professional color scheme with blue and orange accents, clear scannable typography, and smooth interaction states.
