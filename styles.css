@@ -238,6 +238,9 @@ body {
 /* ==========================================================================
    PRICING TIER CARDS SYSTEM
    ========================================================================== */
+/* ==========================================================================
+   PRICING TIER CARDS SYSTEM (WITH ANIMATION HOVER FIX)
+   ========================================================================== */
 .pricing-section {
     background-color: #fafafa;
     padding: 80px 8%;
@@ -253,6 +256,7 @@ body {
     align-items: stretch;
 }
 
+/* Base style for all three cards */
 .pricing-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -260,9 +264,18 @@ body {
     padding: 40px 30px;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-/* Featured Core Pro Tier Card Modifiers */
+/* Standard cards hover effect */
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   PRO / FEATURED CARD STYLES (Keeps its dark color stable)
+   ========================================================================== */
 .pricing-card.featured {
     background-color: #0b1329;
     color: #ffffff;
@@ -271,6 +284,16 @@ body {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
 }
 
+/* Featured card special hover track */
+.pricing-card.featured:hover {
+    background-color: #0b1329; /* Strictly anchors the dark blue background */
+    transform: translateY(-8px) scale(1.05); /* Combines hover lift + visual scale */
+    box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================================
+   INNER TEXT & TYPOGRAPHY LOGIC
+   ========================================================================== */
 .card-header {
     margin-bottom: 30px;
 }
@@ -284,7 +307,7 @@ body {
     margin-bottom: 10px;
 }
 
-.featured .tier-name {
+.pricing-card.featured .tier-name {
     color: #94a3b8;
 }
 
@@ -295,7 +318,7 @@ body {
     line-height: 1;
 }
 
-.featured .price {
+.pricing-card.featured .price {
     color: #ffffff;
 }
 
@@ -304,14 +327,15 @@ body {
     color: #64748b;
 }
 
-.featured .price-lbl {
+.pricing-card.featured .price-lbl {
     color: #94a3b8;
 }
 
+/* Features Bullet Points Lists */
 .features-list {
     list-style: none;
     margin-bottom: 40px;
-    flex: 1; /* Pushes button execution cleanly down to align heights */
+    flex: 1; /* Pushes action buttons down to share the same grid baseline */
 }
 
 .features-list li {
@@ -323,19 +347,21 @@ body {
     color: #475569;
 }
 
-.featured .features-list li {
+.pricing-card.featured .features-list li {
     color: #cbd5e1;
 }
 
+/* Feature Checkmark Icons Styles */
 .features-list li i {
     color: #2563eb;
     font-size: 0.85rem;
 }
 
-.featured .features-list li i {
+.pricing-card.featured .features-list li i {
     color: #3b82f6;
 }
 
+/* Action Button Resizing */
 .pricing-card .btn {
     width: 100%;
 }
