@@ -236,9 +236,6 @@ body {
 }
 
 /* ==========================================================================
-   PRICING TIER CARDS SYSTEM
-   ========================================================================== */
-/* ==========================================================================
    PRICING TIER CARDS SYSTEM (WITH ANIMATION HOVER FIX)
    ========================================================================== */
 .pricing-section {
@@ -413,71 +410,6 @@ body {
     font-size: 0.95rem;
     line-height: 1.6;
 }
-
-/* ==========================================================================
-   ASSIGNMENT MANDATORY FOOTER STYLES
-   ========================================================================== */
-.main-footer {
-    background-color: #0f172a;
-    color: #94a3b8;
-    padding: 40px 8% 20px 8%;
-    border-top: 1px solid #1e293b;
-}
-
-.footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-}
-
-.footer-logo {
-    font-size: 1.2rem;
-    color: #ffffff;
-    font-weight: 600;
-}
-
-.footer-socials {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-socials a {
-    color: #94a3b8;
-    font-size: 1.3rem;
-    transition: color 0.2s, transform 0.2s;
-}
-
-.footer-socials a:hover {
-    color: #fd6e0a; /* Switches to bright orange on mouse hover */
-    transform: scale(1.15);
-}
-
-.footer-divider {
-    border: 0;
-    height: 1px;
-    background: #1e293b;
-    margin-bottom: 20px;
-}
-
-.footer-bottom {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #64748b;
-}
-
-/* Responsive adjustment for small monitors */
-@media (max-width: 768px) {
-    .faq-grid {
-        grid-template-columns: 1fr;
-    }
-    .footer-top {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-}
-
 /* ==========================================================================
    ASSIGNMENT MANDATORY FOOTER STYLES
    ========================================================================== */
