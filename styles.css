@@ -1,0 +1,396 @@
+/* ==========================================================================
+   GLOBAL CONFIGURATION RESETS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+/* Typography Headings */
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    text-align: center;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+/* Global Buttons UI Components */
+.btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    text-align: center;
+}
+
+.btn-blue {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.btn-blue:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #2563eb;
+    border: 1px solid #cbd5e1;
+}
+
+.btn-outline:hover {
+    border-color: #2563eb;
+    background-color: rgba(37, 99, 213, 0.02);
+}
+
+/* ==========================================================================
+   NAVBAR COMPONENT
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #0f172a;
+}
+
+/* ==========================================================================
+   HERO DISPLAY WRAPPER
+   ========================================================================== */
+.hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background-image: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.85); /* Deep translucent layout shield */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    margin-bottom: 35px;
+    line-height: 1.7;
+}
+
+.hero-btn {
+    padding: 15px 35px;
+    font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   SPEAKERS 2D GRID LAYOUT
+   ========================================================================== */
+.speakers-section {
+    padding: 80px 8%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.speaker-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.speaker-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -5px rgba(0,0,0,0.05);
+}
+
+.speaker-img-wrapper {
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f1f5f9;
+}
+
+.speaker-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.speaker-info {
+    padding: 24px;
+}
+
+.speaker-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* Category Color Metrics */
+.tag-ai { color: #2563eb; }
+.tag-cloud { color: #16a34a; }
+.tag-frontend { color: #db2777; }
+.tag-security { color: #ea580c; }
+
+.speaker-info h3 {
+    font-size: 1.3rem;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.speaker-info p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   PRICING TIER CARDS SYSTEM
+   ========================================================================== */
+.pricing-section {
+    background-color: #fafafa;
+    padding: 80px 8%;
+    border-top: 1px solid #e2e8f0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.pricing-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Featured Core Pro Tier Card Modifiers */
+.pricing-card.featured {
+    background-color: #0b1329;
+    color: #ffffff;
+    border-color: #0b1329;
+    transform: scale(1.03);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    margin-bottom: 30px;
+}
+
+.tier-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #64748b;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.featured .tier-name {
+    color: #94a3b8;
+}
+
+.price {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1;
+}
+
+.featured .price {
+    color: #ffffff;
+}
+
+.price-lbl {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.featured .price-lbl {
+    color: #94a3b8;
+}
+
+.features-list {
+    list-style: none;
+    margin-bottom: 40px;
+    flex: 1; /* Pushes button execution cleanly down to align heights */
+}
+
+.features-list li {
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #475569;
+}
+
+.featured .features-list li {
+    color: #cbd5e1;
+}
+
+.features-list li i {
+    color: #2563eb;
+    font-size: 0.85rem;
+}
+
+.featured .features-list li i {
+    color: #3b82f6;
+}
+
+.pricing-card .btn {
+    width: 100%;
+}
+
+/* ==========================================================================
+   AI GENERATION CONTAINER DOTTED PLACEHOLDER
+   ========================================================================== */
+.ai-callout-section {
+    padding: 60px 8%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.ai-box {
+    border: 2px dashed #c084fc;
+    background-color: #f3e8ff;
+    border-radius: 12px;
+    padding: 60px 20px;
+    text-align: center;
+    color: #6b21a8;
+}
+
+.ai-box h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.ai-box p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   RESPONSIVE RETROFITS
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+    }
+    .speakers-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
