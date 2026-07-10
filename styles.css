@@ -367,33 +367,115 @@ body {
 }
 
 /* ==========================================================================
-   AI GENERATION CONTAINER DOTTED PLACEHOLDER
+   AI CHALLENGE FAQ SECTION STYLES
    ========================================================================== */
-.ai-callout-section {
-    padding: 60px 8%;
-    max-width: 1250px;
+.faq-section {
+    padding: 80px 8%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.ai-box {
-    border: 2px dashed #c084fc;
-    background-color: #f3e8ff;
-    border-radius: 12px;
-    padding: 60px 20px;
-    text-align: center;
-    color: #6b21a8;
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
 }
 
-.ai-box h3 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-bottom: 8px;
+.faq-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 25px;
+    border-radius: 8px;
+    transition: transform 0.2s, border-color 0.2s;
 }
 
-.ai-box p {
+.faq-item:hover {
+    transform: translateY(-3px);
+    border-color: #2563eb; /* Highlights blue on hover */
+}
+
+.faq-item h4 {
     font-size: 1.1rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq-item h4 i {
+    color: #fd6e0a; /* Orange question marks icons */
+}
+
+.faq-item p {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   ASSIGNMENT MANDATORY FOOTER STYLES
+   ========================================================================== */
+.main-footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 40px 8% 20px 8%;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    color: #ffffff;
     font-weight: 600;
-    opacity: 0.8;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials a {
+    color: #94a3b8;
+    font-size: 1.3rem;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.footer-socials a:hover {
+    color: #fd6e0a; /* Switches to bright orange on mouse hover */
+    transform: scale(1.15);
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background: #1e293b;
+    margin-bottom: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* Responsive adjustment for small monitors */
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-top {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }
 
 /* ==========================================================================
